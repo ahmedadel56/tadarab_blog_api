@@ -1,6 +1,8 @@
 class Blog < ApplicationRecord
     enum status: { draft: 0, published: 1, pending: 2 }
   
+    default_scope { where(deleted_at: nil) }
+
     has_and_belongs_to_many :authors, class_name: 'User', join_table: :blogs_users
     has_and_belongs_to_many :categories, join_table: :blogs_categories
     has_and_belongs_to_many :tags, join_table: :blogs_tags
@@ -24,8 +26,12 @@ class Blog < ApplicationRecord
 
     def validate_sections_count
         errors.add(:sections, 'exceed the maximum allowed count') if sections.size > 15
-    end   
+    end
 
+    def soft_delete
+      update(deleted_at: Time.current)
+    end
+    
     def single_featured_article
       if featured && Blog.where.not(id: id).where(featured: true).exists?
         errors.add(:featured, 'There can only be one featured article')
