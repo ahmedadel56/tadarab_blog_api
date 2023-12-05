@@ -28,9 +28,9 @@ class Blog < ApplicationRecord
     end   
 
     def single_featured_article
-        if featured && Blog.where(featured: true).exists?
-          errors.add(:featured, 'There can only be one featured article')
-        end
-    end    
+      if featured && Blog.where.not(id: id).where(featured: true).exists?
+        errors.add(:featured, 'There can only be one featured article')
+      end
+    end       
   end
   
