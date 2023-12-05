@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :lockable, :timeoutable, :trackable
-  
+
   has_and_belongs_to_many :authored_blogs, class_name: 'Blog', join_table: :blogs_users
 end
