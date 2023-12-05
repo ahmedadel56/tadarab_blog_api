@@ -17,10 +17,9 @@ class Blog < ApplicationRecord
     validates :meta_title, length: { maximum: 60, too_long: 'must be at most %{count} characters' }
     validates :meta_description, length: { maximum: 160, too_long: 'must be at most %{count} characters' }
 
-    # Add validations and image handling (e.g., using ActiveStorage)
-    validates :image, content_type: ['image/png', 'image/jpg', 'image/jpeg'],
+    validates :image, content_type: { in: ['image/png', 'image/jpg', 'image/jpeg'] },
     size: { less_than: 100.kilobytes }
-
+    
     private
 
     def validate_sections_count
