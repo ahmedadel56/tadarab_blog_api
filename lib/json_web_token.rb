@@ -1,6 +1,5 @@
 # lib/json_web_token.rb
 
-
 class JsonWebToken
   SECRET_KEY = Rails.application.credentials.secret_key_base.to_s
 
