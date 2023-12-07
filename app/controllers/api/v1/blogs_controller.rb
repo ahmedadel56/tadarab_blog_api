@@ -3,6 +3,7 @@
 module Api
   module V1
     class BlogsController < ApplicationController
+      load_and_authorize_resource
       before_action :set_blog, only: %i[show update destroy]
 
       # GET /blogs
