@@ -2,7 +2,6 @@ class ApplicationController < ActionController::API
   before_action :authenticate_request
   attr_reader :current_user
 
-
   rescue_from CanCan::AccessDenied do |_exception|
     render json: { error: 'Access denied!' }, status: :forbidden
   end
