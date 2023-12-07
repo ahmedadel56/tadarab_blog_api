@@ -18,11 +18,14 @@ tags = Tag.create!(tag_names.map { |name| { name: name } })
 
 # Users (Authors)
 10.times do |i|
+  role = i < 5 ? 'admin' : 'user'  # First 5 users are admins, others are normal users
+
   User.create!(
     email: "trainer#{i+1}@example.com", 
     password: 'password', 
     password_confirmation: 'password', 
-    name: "Trainer #{i+1}"
+    name: "Trainer #{i + 1}",
+    role: role
   )
 end
 
