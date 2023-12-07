@@ -29,7 +29,6 @@ gem 'cancancan' # The authorization Gem for Ruby on Rails.
 # Dotenv is a zero-dependency module that loads environment variables from a .env file into ENV.
 gem 'active_storage_validations' # ActiveStorage validations for Rails 5.2+
 gem 'dotenv-rails'
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
