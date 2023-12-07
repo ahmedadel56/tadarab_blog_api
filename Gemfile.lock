@@ -132,6 +132,7 @@ GEM
       rdoc
       reline (>= 0.3.8)
     json (2.7.0)
+    jwt (2.7.1)
     language_server-protocol (3.17.0.3)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -300,6 +301,7 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
+  jwt
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)

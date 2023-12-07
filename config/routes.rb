@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :tags, only: [:index]
       resources :users
       post '/login', to: 'authentication#login'
+      post '/logout', to: 'authentication#logout'
       # Define other routes as needed
     end
   end
