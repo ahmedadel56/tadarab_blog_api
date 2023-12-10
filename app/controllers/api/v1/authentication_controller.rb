@@ -4,7 +4,7 @@ module Api
   module V1
     class AuthenticationController < ApplicationController
       # Skip before_action since this is the login
-      skip_before_action :authenticate_request, only: %i[login logout]
+      skip_before_action :authenticate_request, only: %i[login]
 
       def login
         user = User.find_by(email: params[:email])
