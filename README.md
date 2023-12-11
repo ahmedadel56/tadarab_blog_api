@@ -74,7 +74,7 @@ Versioning follows [SemVer](http://semver.org/) standards.
 
 ## Authors
 
-- **[Ahmed Adel]**
+- **Ahmed Adel**
 
 ## License
 
