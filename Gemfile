@@ -43,6 +43,7 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'brakeman' # free vulnerability scanner specifically designed for Ruby on Rails
   gem 'capybara'
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
@@ -52,7 +53,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'webdrivers'
-  gem "brakeman" #free vulnerability scanner specifically designed for Ruby on Rails
 end
 
 group :development do
