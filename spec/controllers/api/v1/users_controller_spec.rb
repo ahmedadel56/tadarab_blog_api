@@ -74,7 +74,6 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     end
   end
 
-
   describe 'DELETE #destroy' do
     before do
       @user_to_delete = create(:user)
