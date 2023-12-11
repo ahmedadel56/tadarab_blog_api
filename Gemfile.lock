@@ -88,6 +88,7 @@ GEM
     bigdecimal (3.1.4)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
+    brakeman (6.1.0)
     builder (3.2.4)
     bullet (7.1.4)
       activesupport (>= 3.0.0)
@@ -304,6 +305,7 @@ PLATFORMS
 DEPENDENCIES
   active_storage_validations
   bootsnap
+  brakeman
   bullet
   cancancan
   capybara
