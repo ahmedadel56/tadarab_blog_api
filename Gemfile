@@ -52,6 +52,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'webdrivers'
+  gem "brakeman" #free vulnerability scanner specifically designed for Ruby on Rails
 end
 
 group :development do
